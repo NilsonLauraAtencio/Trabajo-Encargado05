@@ -1,0 +1,206 @@
+%
+\documentclass[%
+ reprint,
+ amsmath,amssymb,
+ aps,
+]{revtex4-1}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+
+
+\begin{document}
+
+
+
+\title{SQL vs NoSQL}
+\author{Nilson Felix Laura Atencio}
+
+\affiliation{%
+ Universidad Privada de Tacna \textbackslash Facultad de Ingenieria \textbackslash Escuela Profesional de Ingenieria de Sistemas
+}%
+
+\begin{abstract}
+\begin{center}
+\textbf{Resumen}
+\end{center}
+
+Los lenguajes de programación se mantienen en constante cambio, desde lenguaje máquina, assembler, lenguajes de segunda y tercera generación hasta llegar a una cuarta, la cual comúnmente fue utilizada para poder administrar diferentes DBMS (Database Management System), este lenguaje fue llamado; SQL(Structured Query Language). Durante la maduración de este lenguaje surgieron varias soluciones de software que permitían poder realizar operaciones de consultas, grabar o insertar información, actualizar, eliminar, etc. Fueron surgiendo varios programas que con el tiempo fueron denominados RDBMS (Sistema de Gestor de Base de Datos Relacionales ó Relational DataBase Management System).
+El SQL fue uno de los lenguajes de programación estructurada más aceptada, pero siempre van a existir limitantes, en las cuales la tecnología tiene que ir en constante evolución para buscar respuestas a esas limitantes, por eso el surgimiento de soluciones de software basados en sistemas NoSQL, el cual significa “Not Only SQL” por sus siglas en inglés, lo que busca es mejorar temas de rendimiento sobre las bases de datos relacionales pero también dentro de las ventajas conllevan algunas desventajas las cuales trataremos de discutir durante el desarrollo de este documento.
+.\\
+
+\textbf{Palabras clave:}   virtualizacion, contenedores, herramientas, simulacion, procesos, recursos.\\
+
+\begin{center}
+\textbf{Abstract}
+\end{center}
+The programming languages are in constant change, from machine language, assembler, second generation and third generation languages. SQL (structured query language). During the maturation of this language emerged several software solutions that allowed to perform operations of consultations, record or insert information, update, delete, etc. Several programs were created that over time were also called RDBMS (Relational Database Management System (Relational Database Management System). SQL was one of the most accepted structured programming languages, but there was always a way to limit itself, in the network. , which means "Not only SQL" for its acronym in English, which seeks to improve performance issues on relational databases but also within the advantages that carry some disadvantages that deal with the subject of this report. .\\
+\textbf{Keywords:}   virtualization, containers, tools, processes, simulation, resources.\\
+
+\end{abstract}
+
+
+
+\maketitle
+
+%\tableofcontents
+
+\section {Introducción}\label{sec:1}
+
+Las bases de datos no son para nada ajenas a las innovaciones y nuevas tendencias que se desarrollan a su alrededor. Es por ello que a las tradicionales bases SQL les salió ya hace ya un tiempo un competidor que cada vez tiene más fuerza, las bases NoSQL. Muchos desarrolladores han optado por migrar sus proyectos y trabajos a este modelo, pero para hacerlo es conveniente primero saber las diferencias entre ambas y también sus principales tecnologías, de forma que puedas tener información precisa sobre cuál te conviene más en cada caso.
+
+
+
+%-----------------------------------------------------------------
+\section{Objetivos}\label{sec:2}
+\subsection{General:}
+-  Determinar las características diferenciales entre  SQL y  NoSQL.
+\subsection{Específicos:}
+-  Comparar el concepto de bases de datos SQL Y  NoSQL, además de presentar sus ventajas y compararlos con otros sistemas de bases de datos, como los relacionales.
+
+
+%-----------------------------------------------------------------
+\section {Marco Teórico}\label{sec:3}
+
+\subsection{SQL}
+\par Una máquina virtual es un software que emula un ordenador justo como si fuese uno real. Todo esto sucede en una ventana dentro de tu sistema operativo actual como cualquier otro programa que uses.
+\par Cómo funciona:
+	\begin{itemize}
+		\item Cuando creas una máquina virtual para instalar otro sistema operativo tendrás que asignar todos los recursos que necesitas.
+	\end{itemize}
+\subsection{NoSQL}
+\par NoSQL aparece con la llegada de la web 2.0 ya que hasta ese momento sólo subían contenido a la red aquellas empresas que tenían un portal, pero con la llegada de aplicaciones como Facebook, Twitter o Youtube, cualquier usuario podía subir contenido, provocando así un crecimiento exponencial de los datos.
+
+\par Es en este momento cuando empiezan a aparecer los primeros problemas de la gestión de toda esa información almacenada en bases de datos relacionales. En un principio, para solucionar estos problemas de accesibilidad, las empresas optaron por utilizar un mayor número de máquinas pero pronto se dieron cuenta de que esto no solucionaba el problema, además de ser una solución muy cara. La otra solución era la creación de sistemas pensados para un uso específico que con el paso del tiempo han dado lugar a soluciones robustas, apareciendo así el movimiento NoSQL. 
+\par Además de lo comentado anteriormente, las bases de datos NoSQL son sistemas de almacenamiento de información que no cumplen con el esquema entidad–relación. Tampoco utilizan una estructura de datos en forma de tabla donde se van almacenando los datos sino que para el almacenamiento hacen uso de otros formatos como clave–valor, mapeo de columnas o grafos.
+
+
+\par Beneficios:
+	Esta forma de almacenar la información ofrece ciertas ventajas sobre los modelos relacionales. Entre las ventajas más significativas podemos destacar:
+	\begin{itemize}
+		\item Se ejecutan en máquinas con pocos recursos: Estos sistemas, a diferencia de los sistemas basados en SQL, no requieren de apenas computación, por lo que se pueden montar en máquinas de un coste más reducido.
+		\item Escalabilidad horizontal: Para mejorar el rendimiento de estos sistemas simplemente se consigue añadiendo más nodos, con la única operación de indicar al sistema cuáles son los nodos que están disponibles.
+		\item Pueden manejar gran cantidad de datos: Esto es debido a que utiliza una estructura distribuida, en muchos casos mediante tablas Hash.(asocia llaves o claves con valores).\cite{hash}
+		\item No genera cuellos de botella: El principal problema de los sistemas SQL es que necesitan transcribir cada sentencia para poder ser ejecutada, y cada sentencia compleja requiere además de un nivel de ejecución aún más complejo, lo que constituye un punto de entrada en común, que ante muchas peticiones puede ralentizar el sistema. \cite{acens}
+	\end{itemize}
+	\begin{figure}[htb]
+	\begin{center}
+	\includegraphics[width=7cm]{./Imagenes/hash}
+	\end{center}
+	\end{figure}
+
+           \par TIPOS PARA ALMACENAR INFORMACIÓN EN BASE DE DATOS NOSQL
+\\        
+\\  
+  -  Base de Datos Orientadas a Documentos:
+\\
+           \begin{figure}[htb]
+	\begin{center}
+	\includegraphics[width=7cm]{./Imagenes/1}
+	\end{center}
+	\end{figure}
+\\
+ Este tipo almacena la información como un documento, generalmente utilizando para ello una estructura simple como JSON o XML y donde se utiliza una clave única para cada registro. Este tipo de implementación permite, además de realizar búsquedas por clave–valor, realizar consultas más avanzadas sobre el contenido del documento.  
+Son las bases de datos NoSQL más versátiles. Se pueden utilizar en gran cantidad de proyectos, incluyendo muchos que tradicionalmente funcionarían sobre bases de datos relacionales. \cite{TiposNoSQL}
+Algunos ejemplos de este tipo son:
+           \begin{itemize}
+		\item MongoDB
+		\item CouchDB
+		\item RaveDB
+		\item SimpleDB (Amazon)
+	\end{itemize}
+
+ -  Base de datos key-value:
+\\
+\\
+ \begin{figure}[htb]
+	\begin{center}
+	\includegraphics[width=7cm]{./Imagenes/2}
+	\end{center}
+	\end{figure}
+Son el modelo de base de datos NoSQL más popular, además de ser la más sencilla en cuanto a funcionalidad. En este tipo de sistema, cada elemento está identificado por una llave única, lo que permite la recuperación de la información de forma muy rápida, información que habitualmente está almacenada como un objeto binario (BLOB). Se caracterizan por ser muy eficientes tanto para las lecturas como para las escrituras.  \cite{acens}
+Algunos ejemplos de este tipo son :
+           \begin{itemize}
+		\item Cassandra (Apache)
+		\item Riak
+		\item Redis
+		\item Dynamo (Amazon)
+                     \item Dynamo (Amazon)
+                     \item BigTable (Google)
+	\end{itemize}
+-  Base de datos en grafo:
+\\
+\\
+ \begin{figure}[htb]
+	\begin{center}
+	\includegraphics[width=7cm]{./Imagenes/3}
+	\end{center}
+	\end{figure}
+En este tipo de bases de datos, la información se representa como nodos de un grafo y sus relaciones con las aristas del mismo, de manera que se puede hacer uso de la teoría de grafos para recorrerla. Para sacar el máximo rendimiento a este tipo de bases de datos, su estructura debe estar totalmente normalizada, de forma que cada tabla tenga una sola columna y cada relación dos. 
+Este tipo de bases de datos ofrece una navegación más eficiente entre relaciones que en un modelo relacional. \cite{acens}
+Algunos ejemplos de este tipo son:
+           \begin{itemize}
+		\item Neo4j
+		\item Dex
+		\item Sones GraphBD
+		\item AllegroGraph
+	\end{itemize}
+-  Base de datos orientadas a objetos:
+\\
+\\
+En este tipo, la información se representa mediante objetos, de la misma forma que son representados en los lenguajes de programación orientada a objetos (POO) como ocurre en JAVA, Cchar o Visual Basic .NET. \cite{acens}
+Algunos ejemplos de este tipo de bases de datos son : 
+
+           \begin{itemize}
+		\item ObjectDB
+		\item ZooDB
+		\item DB4o
+	\end{itemize}
+
+- Nosql es "más adecuado" en estos escenarios por lo menos:
+   \begin{itemize}
+		\item Fácil de escalar simplemente agregando más nodos.
+		\item Consulta sobre conjunto de datos de gran tamaño.En RDMS, podría haber tablas con millones (¿o miles de millones?) De filas, y no desea hacer consultas en esas tablas directamente, ni siquiera mencionar, la mayoría de las veces, las combinaciones de tablas también son necesarias para consultas complejas.
+		\item Cuello de botella en la E / S del disco Si un sitio web necesita enviar resultados a diferentes usuarios en función de la información en tiempo real de los usuarios, probablemente estamos hablando de decenas o cientos de miles de solicitudes de lectura / escritura de SQL por segundo\cite{No}
+	\end{itemize}
+- EJEMPLO:
+Los métodos insertOne(<document>) e insertMany([<doc1>,<doc2>…]) implícitamente crean una collection si no existe e insertan uno o muchos documents según sea el caso. Por si no se dieron cuenta en Mongo no tuvimos que especificar el “id” de nuestro document, si no definimos un campo “id”, Mongo lo crea automáticamente.El método updateMany(<filter>,<update>) actualiza múltiples documents dentro de una collection basado en el filtro que recibe como argumento, pero además puede alterar los documents con operaciones de set (establecer) y unset (des-establecer) para agregar o borrar fields. Como vemos la forma de alterar información en Mongo no se hace a nivel de collections ya que no es una modificación estructural sino de documents (registros de nuestra colección).Con insert nosotros podemos agregar registros a nuestra definición de datos. En Mongo ya vimos la forma de hacer estos inserts con los métodos insertOne() e insertMany().\cite{NoSQL}
+\begin{figure}[htb]
+	\begin{center}
+	\includegraphics[width=7cm]{./Imagenes/4}
+          \includegraphics[width=7cm]{./Imagenes/5}
+	\end{center}
+	\end{figure}
+\subsection{SQL vs NoSQL}
+	\begin{figure}[htb]
+	\begin{center}
+	\includegraphics[width=7cm]{./Imagenes/tablasqlno}
+	\end{center}
+	\end{figure}
+	\par NoSQL: 
+	\begin{itemize}
+	\item No utilizan estructuras fijas como tablas para el almacenamiento de los datos. Permiten hacer uso de otros tipos de modelos de almacenamiento de información como sistemas de clave–valor, objetos o grafos.
+	\item No suelen permitir operaciones JOIN. Al disponer de un volumen de datos tan extremadamente grande suele resultar deseable evitar los JOIN. Esto se debe a que, cuando la operación no es la búsqueda de una clave, la sobrecarga puede llegar a ser muy costosa. Las soluciones más directas consisten en desnormalizar los datos, o bien realizar el JOIN mediante software, en la capa de aplicación.
+	\item Arquitectura distribuida. Las bases de datos relacionales suelen estar centralizadas en una única máquina o bien en una estructura máster–esclavo, sin embargo en los casos NoSQL la información puede estar compartida en varias máquinas mediante mecanismos de tablas Hash distribuidas.
+	\end{itemize}
+	\cite{comparison}
+	
+
+%-----------------------------------------------------------------
+\section{Conclusiones}\label{sec:6}
+
+
+\begin{itemize}
+	\item Los Contenedores son un método de virtualización de un sistema operativo que permite ejecutar una aplicación junto con sus elementos dependientes, en un ambiente aislado e independiente.
+	\item Es importante entender que, para elegir el SGBD más adecuado, se debe comenzar por el estudio del tipo de datos que se van a almacenar y cómo se van a administrar.
+\end{itemize}
+
+
+% Bibliografia.
+%-----------------------------------------------------------------
+
+\bibliographystyle{plain}
+\bibliography{Bibliografia}
+
+\end{document}
